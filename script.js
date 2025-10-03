@@ -1,23 +1,28 @@
-const foods = [ 
-            'sushi',
-            'pizza',
-            'burgers',
-            'ice cream',
-            'cake',
-            'noodles',
-            'chocolate',
-            'cookies',
-            'steak',
-            'mochi'
-        ];
+const foods = [  
+  'sushi',
+  'pizza',
+  'burgers',
+  'ice cream',
+  'cake',
+  'noodles',
+  'chocolate',
+  'cookies',
+  'steak',
+  'mochi'
+];
 
-        foods.sort();
+// Sort alphabetically (Challenge Option 1)
+foods.sort();
 
-        const listElement = document.getElementById('food-list');
+const listElement = document.getElementById('food-list');
 
-        // Add each food as a list item
-        for (let i = 0; i < foods.length; i++) {
-            const li = document.createElement('li');
-            li.textContent = foods[i];
-            listElement.appendChild(li);
-        }
+// Loop and output each food
+for (let i = 0; i < foods.length; i++) {
+  const li = document.createElement('li');
+  // Add numbering (Challenge Option 2)
+  li.textContent = `${i + 1}. ${foods[i]}`;
+  listElement.appendChild(li);
+
+  // Also log each individually to the console
+  console.log(foods[i]);
+}
